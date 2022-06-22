@@ -1,11 +1,11 @@
-float inc = 0.05;
-int scl = 10;
+float inc = 0.01;
+int scl = 3;
 int rows, cols;
 float zOff = 0;
 PVector[] flowfield;
 
 Particle[] particles;
-int numberOfParticles = 100000;
+int numberOfParticles = 150000;
 
 void setup(){
   fullScreen(P2D);
@@ -23,7 +23,10 @@ void setup(){
 }
 
 void draw(){
-  strokeWeight(1);
+  strokeWeight(2);
+  noStroke();
+  fill(0,10);
+  rect(0,0,width,height);
   float yOff = 0;
   for (int y = 0; y < rows; y++){
     float xOff = 0;
